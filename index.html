@@ -5,34 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <style>
-    /* Make the image cover the whole background */
+    /* Full-page background */
     body {
       margin: 0;
       height: 100vh;
-      background-image: url('karam_welcome.jpg'); /* Use your image filename */
-      background-size: cover;       /* Cover entire screen */
-      background-position: center;  /* Center the image */
-      background-repeat: no-repeat; /* Don't tile */
-      font-family: Arial, sans-serif;
-      color: white;                 /* Text color on top of image */
+      background-image: url('karam_welcome.jpg'); /* your background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
-    h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* Makes text readable on image */
+    .contact-box {
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+      padding: 30px 40px;
+      border-radius: 15px;
     }
 
-    p {
-      font-size: 1.5em;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
+  <div class="contact-box">
+    <h1>Contact Me</h1>
+    <p>Email me at:</p>
+    <p><a href="mailto:skkxy3@gmail.com">skkxy3@gmail.com</a></p>
+  </div>
 </body>
 </html>
