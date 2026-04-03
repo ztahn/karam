@@ -3,27 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Contact</title>
+
   <style>
-    /* Full-page background */
     body {
       margin: 0;
       height: 100vh;
-      background-image: url('karam_welcome.jpg'); /* your background image */
+      background-image: url('karam_welcome.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+    }
+
+    /* Logo positioning + entrance animation */
+    .site-logo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fadeSlideDown 1.2s ease-out forwards;
+    }
+
+    .site-logo img {
+      max-width: 150px;
+      animation: floatLogo 3s ease-in-out infinite;
+    }
+
+    /* Centered content container */
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .contact-box {
-      background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+      background: rgba(0, 0, 0, 0.5);
       padding: 30px 40px;
       border-radius: 15px;
     }
@@ -37,14 +57,45 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* Animations */
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    @keyframes floatLogo {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="site-logo"><img src="14_nobg.png" /></div>
-  <div class="contact-box">
-    <h1>Contact Me</h1>
-    <p>Email me at:</p>
-    <p><a href="mailto:skkxy3@gmail.com">skkxy3@gmail.com</a></p>
+
+  <!-- Logo -->
+  <div class="site-logo">
+    <img src="14_nobg.png" alt="Logo">
   </div>
+
+  <!-- Centered Contact Box -->
+  <div class="container">
+    <div class="contact-box">
+      <h1>Contact Me</h1>
+      <p>Email me at:</p>
+      <p><a href="mailto:skkxy3@gmail.com">skkxy3@gmail.com</a></p>
+    </div>
+  </div>
+
 </body>
 </html>
