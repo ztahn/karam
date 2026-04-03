@@ -20,21 +20,22 @@
       position: relative;
     }
 
-    /* Logo positioning + entrance animation */
+    /* Logo top-centered */
     .site-logo {
       position: absolute;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      animation: fadeSlideDown 1.2s ease-out forwards;
     }
 
     .site-logo img {
-      max-width: 150px;
-      animation: floatLogo 3s ease-in-out infinite;
+      max-width: 160px;
+      /* Glow effect */
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6))
+              drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
     }
 
-    /* Centered content container */
+    /* Centered content */
     .container {
       height: 100%;
       display: flex;
@@ -57,27 +58,6 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* Animations */
-    @keyframes fadeSlideDown {
-      from {
-        opacity: 0;
-        transform: translate(-50%, -30px);
-      }
-      to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-      }
-    }
-
-    @keyframes floatLogo {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
   </style>
 </head>
 
@@ -88,7 +68,7 @@
     <img src="14_nobg.png" alt="Logo">
   </div>
 
-  <!-- Centered Contact Box -->
+  <!-- Contact Box -->
   <div class="container">
     <div class="contact-box">
       <h1>Contact Me</h1>
